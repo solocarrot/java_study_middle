@@ -20,13 +20,13 @@ public class NetworkClientV1 {
         return  "connectSuccess";
     }
 
-    public String send(String address) {
+    public String send(String data) {
         if(sendError) {
-            System.out.println(address + "데이터전송실패" );
+            System.out.println(address + "데이터전송실패" + data);
             return "sendError";
         }
 
-        System.out.println(address + "데이터전송성공" );
+        System.out.println(address + "데이터전송성공" + data);
         return "success";
     }
 
