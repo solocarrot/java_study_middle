@@ -4,7 +4,7 @@ public class LibraryMain {
     public static void main(String[] args) {
         Library library = new Library(4);
 
-        library.addBook();
+        library.addBook("잘한다", "종윤");
 
     }
 }
