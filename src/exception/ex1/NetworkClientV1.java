@@ -22,11 +22,11 @@ public class NetworkClientV1 {
 
     public String send(String address) {
         if(sendError) {
-            System.out.println(address + "데이터전송실패" + data);
+            System.out.println(address + "데이터전송실패" );
             return "sendError";
         }
 
-        System.out.println(address + "데이터전송성공" + data);
+        System.out.println(address + "데이터전송성공" );
         return "success";
     }
 
