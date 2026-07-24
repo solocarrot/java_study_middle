@@ -17,7 +17,7 @@ public class NetworkClientV1 {
         }
 
         System.out.println(address + "서버연결성공");
-        return  "connectSuccess";
+        return  "success";
     }
 
     public String send(String data) {
