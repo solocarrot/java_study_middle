@@ -6,7 +6,7 @@ public class MainV1 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        NetworkSeverV1_2 severV1_2 = new NetworkSeverV1_2();
+        NetworkSeverV1_3 severV1_2 = new NetworkSeverV1_3();
         while(true) {
             System.out.print("전송할 문자 : ");
             String data = scanner.nextLine();

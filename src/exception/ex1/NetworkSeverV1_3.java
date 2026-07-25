@@ -11,6 +11,7 @@ public class NetworkSeverV1_3 {
         //만약에 error1이 들어왔으면 얘는 서버연결실패가되는거야.
         if (isError(connectResult)) {
             System.out.println("[네트워크 오류 발생] 오류 코드: " + connectResult);
+            clientV1.disconnect();
             return;
         }
 
@@ -18,6 +19,7 @@ public class NetworkSeverV1_3 {
         String sendResult = clientV1.send(data);
         if(isError(sendResult)) {
             System.out.println("[네트워크 오류 발생] 오류 코드: " + sendResult);
+            clientV1.disconnect();
             return;
         }
 
