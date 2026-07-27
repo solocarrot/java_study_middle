@@ -1,8 +1,9 @@
 package exception.basic.checked;
 
 public class CheckedCallMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MyCheckedException {
         Service service = new Service();
         service.catchThrow();
+        System.out.println("정상종료");
     }
 }
