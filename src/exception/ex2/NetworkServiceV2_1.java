@@ -1,6 +1,6 @@
 package exception.ex2;
 
-public class NetworkSeverV2_1 {
+public class NetworkServiceV2_1 {
 
     public void sendMessage(String data) throws NetworkClientExceptionV2{
         String address = "http://example.com";
