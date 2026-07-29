@@ -6,7 +6,7 @@ public class MainV2 {
     public static void main(String[] args) throws NetworkClientExceptionV2{
         Scanner scanner = new Scanner(System.in);
 
-        NetworkSeverV2_1 sever = new NetworkSeverV2_1();
+        NetworkServiceV2_5 sever = new NetworkServiceV2_5();
         while(true) {
             System.out.println("전송할 문자");
             String data = scanner.nextLine();
