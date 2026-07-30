@@ -23,7 +23,7 @@ public class NetworkClientV3 {
 
     public void send(String data) throws SendExceptionV3{
         if(sendError){
-            throw new SendExceptionV3(data, data + "메세지 전송실패");
+            throw new SendExceptionV3(data, address + "서버에 데이터 전송실패");
         }
 
         System.out.println("전송메시지: " + data + "전송성공");
