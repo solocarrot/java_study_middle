@@ -27,7 +27,7 @@ public class NetworkClientV4 {
     }
 
     public void disconnect() {
-        System.out.println("서버연결종료");
+        System.out.println("서버연결해제");
     }
 
 

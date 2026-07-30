@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MainV3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        NetworkServiceV3 service = new NetworkServiceV3();
+        NetworkServiceV3_2 service = new NetworkServiceV3_2();
 
         while(true) {
             System.out.println("데이터를 입력하세요: ");
