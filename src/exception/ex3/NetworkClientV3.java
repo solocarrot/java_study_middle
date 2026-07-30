@@ -14,33 +14,31 @@ public class NetworkClientV3 {
 
     public void connect() throws ConnectExceptionV3{
         if(connectError){
-            System.out.println("");
+            throw new ConnectExceptionV3(address, address + "서버 연결실패");
         }
 
         System.out.println("서버명: " + address + "연결성공");
 
     }
 
-    public void send() throws SendExceptionV3{
+    public void send(String data) throws SendExceptionV3{
         if(sendError){
-            System.out.println("");
+            throw new SendExceptionV3(data, data + "메세지 전송실패");
         }
 
-        System.out.println("전송메시지: " + data + "전송실패");
+        System.out.println("전송메시지: " + data + "전송성공");
     }
 
-    public boolean initError(String data) {
+    public void disconnect() {
+        System.out.println("서버연결해제");
+    }
+
+    public void initError(String data) {
         if(data.contains("Error1")){
             connectError = true;
         }
         if(data.contains("Error2")){
             sendError = true;
         }
-
     }
-
-
-
-
-
 }
