@@ -4,7 +4,7 @@ import exception.ex3.exception.NetworkClientExceptionV3;
 import exception.ex3.exception.SendExceptionV3;
 import exception.ex3.exception.ConnectExceptionV3;
 
-public class NetworkServiceV3 {
+public class NetworkServiceV3_1 {
 
     public void sendMessage(String data) {
         String address =  "https://example.com";
