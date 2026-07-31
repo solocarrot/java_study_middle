@@ -7,9 +7,9 @@ public class DiscountService {
 
         if(grade.equals("Basic")) {
             discountPercent = 10;
-        } else if(grade.equals("Silver")) {
-            discountPercent = 20;
         } else if(grade.equals("Gold")) {
+            discountPercent = 20;
+        } else if(grade.equals("Diamond")) {
             discountPercent = 30;
         } else {
             System.out.println(grade + "할인X");
