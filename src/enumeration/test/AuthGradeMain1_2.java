@@ -1,6 +1,6 @@
 package enumeration.test;
 
-public class AuthGradeMain1_1 {
+public class AuthGradeMain1_2 {
     public static void main(String[] args) {
         AuthGrade[] vales = AuthGrade.values();
         for(AuthGrade value : vales) {
