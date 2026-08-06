@@ -21,5 +21,6 @@ public class WildcardMain1 {
         Animal dog2 = WildcardEx.printAndReturnWildcard(dogBox);
 
 
+
     }
 }
