@@ -1,6 +1,6 @@
 package progammers;
 
-class Solution {
+class Solution12912 {
     public long solution(int a, int b) {
         long answer = 0;
         //a와 b에 속한 모두 정수의 합을 리턴하기.
