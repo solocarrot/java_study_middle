@@ -15,10 +15,10 @@ public class Solution12925 {
 
         int superScript = 5;
         for(int i = 0; i < arrayLength; i++) {
-            if(isSign(charArray[i])) {
-                superScript--;
-
-            }
+//            if(isSign(charArray[i])) {
+//                superScript--;
+//
+//            }
             int num1 = charArray[i] - 48;
             int num2 = superScript(superScript);
             superScript--;
@@ -28,13 +28,13 @@ public class Solution12925 {
         return answer;
     }
 
-    private char isSign(char c) {
-        if(c == '+' ) {
-            return ' ';
-        } else if (c == '-') {
-            return '-';
-        }
-    }
+//    private char isSign(char c) {
+//        if(c == '+' ) {
+//            return ' ';
+//        } else if (c == '-') {
+//            return '-';
+//        }
+//    }
 
     private int superScript(int n) {
         int result = 1;

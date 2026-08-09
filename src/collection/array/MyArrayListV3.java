@@ -36,15 +36,27 @@ public class MyArrayListV3 {
             grow();
         }
         indexToRight(index);
+        elementData[index] = o;
+        size++;
     }
 
     public void indexToRight(int index) {
         Object temp;
-        for(int i = index + 1; i < elementData.length - 1; i++) {
-            temp = elementData[i];
+        for(int i = size; i > index; i--) {
             elementData[i] = elementData[i - 1];
-            elementData[i + 1] = temp;
         }
+    }
+
+    public void remove(int index) {
+        rightToLeft(index);
+        size--;
+    }
+
+    public void rightToLeft(int index) {
+        for(int i = index; i < elementData.length - 2; i++) {
+            elementData[i] = elementData[i + 1];
+        }
+        elementData[elementData.length - 1] = null;
     }
 
     public void grow() {
