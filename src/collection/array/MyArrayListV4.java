@@ -2,18 +2,18 @@ package collection.array;
 
 import java.util.Arrays;
 
-public class MyArrayListV3 {
+public class MyArrayListV4<E> {
 
     private static final int DEFAULT_CAPACITY = 5;
 
     private Object[] elementData;
     private int size = 0;
 
-    public MyArrayListV3() {
+    public MyArrayListV4() {
         elementData = new Object[DEFAULT_CAPACITY];
     }
 
-    public MyArrayListV3(int initialCapacity) {
+    public MyArrayListV4(int initialCapacity) {
         elementData = new Object[initialCapacity];
     }
 
@@ -21,7 +21,7 @@ public class MyArrayListV3 {
         return size;
     }
 
-    public void add(Object e) {
+    public void add(E e) {
         //무슨일이 벌어지는지보자 2칸짜리 배열이있어 사이즈는0인데 1추가하면 1 null 사이즈는 1 / 1 2 2/
         //여기서한번더 add를하면 이제 메서드에서확인을하는거지 사이즈가 지금2에요 하면늘리기
         if(size == elementData.length) {
@@ -31,7 +31,7 @@ public class MyArrayListV3 {
         size++;
     }
 
-    public void add(Object o, int index) {
+    public void add(E o, int index) {
         if(index > size || elementData[elementData.length - 1] != null) {
             grow();
         }
@@ -41,7 +41,6 @@ public class MyArrayListV3 {
     }
 
     public void indexToRight(int index) {
-        Object temp;
         for(int i = size; i > index; i--) {
             elementData[i] = elementData[i - 1];
         }
@@ -67,12 +66,13 @@ public class MyArrayListV3 {
         elementData = newElementData;
     }
 
-    public Object get(int index) {
-        return elementData[index];
+    @SuppressWarnings("uncheked")
+    public E get(int index) {
+        return (E) elementData[index];
     }
 
-    public Object set(int index, Object element) {
-        Object oldValue = get(index);
+    public E set(int index, E element) {
+        E oldValue = get(index);
         elementData[index] = element;
         return oldValue;
     }
